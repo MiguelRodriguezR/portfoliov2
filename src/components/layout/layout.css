@@ -1,0 +1,111 @@
+.big-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 1400px;
+}
+
+.section-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 50px 0 50px;
+}
+
+.left-container{
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.right-container{
+    overflow: auto;
+    align-items: flex-end;
+}
+
+.intro > .title{
+    -webkit-transform-origin-x: 0;
+    transform:scale(1.23,1.1);
+    display: flex;
+    font-size: 3em;
+    font-weight: bold;
+    color: #A9B7C5;
+}
+
+.intro > .subtitle{
+    font-size: 0.9em;
+}
+
+.intro > .i-text{
+    margin-top: 5px;
+    white-space: pre-wrap;
+    color: #A9B7C5;
+    font-size: 1.75em;
+    max-width: 380px;
+}
+
+.menu{
+    margin-top: 50px;
+}
+
+.option{
+    display: flex;
+    color: #A9B7C5;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.opt-separator{
+    width: 100px;
+    height: 1px;
+    background-color: #A9B7C5;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer-path{
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.footer-path > .photo{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: solid 4px #FFC66D;
+}
+
+.footer-path > .photo > img{
+    width: 50px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.s-network{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.s-network:hover{
+    background-color: #111111;
+}
+
+
+.s-n-ico{
+    text-align: center;
+    font-size: 0.8em;
+    margin: 10px;
+}
