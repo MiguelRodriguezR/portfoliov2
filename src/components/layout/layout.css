@@ -17,30 +17,34 @@
 }
 
 .left-container{
+    padding-right: 0px;
     overflow: hidden;
     align-items: flex-start;
     justify-content: space-between;
 }
 
 .right-container{
+    padding-left: 0px;
     overflow: auto;
+    overflow-x: visible;
     align-items: flex-end;
 }
 
-.intro > .title{
+.intro .title{
     -webkit-transform-origin-x: 0;
     transform:scale(1.23,1.1);
     display: flex;
     font-size: 3em;
     font-weight: bold;
     color: #A9B7C5;
+    margin-bottom: 3px;
 }
 
-.intro > .subtitle{
+.intro .subtitle{
     font-size: 0.9em;
 }
 
-.intro > .i-text{
+.intro .i-text{
     margin-top: 5px;
     white-space: pre-wrap;
     color: #A9B7C5;
@@ -68,7 +72,7 @@
 }
 
 .footer-path{
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     display: flex;
 }
 
@@ -93,7 +97,7 @@
 .s-network{
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: #232325;
     padding: 10px;
     color: white;
     cursor: pointer;
@@ -108,4 +112,12 @@
     text-align: center;
     font-size: 0.8em;
     margin: 10px;
+}
+
+.uncutable{
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
 }

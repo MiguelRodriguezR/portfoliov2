@@ -40,4 +40,31 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script>
+
+    window.addEventListener("message", (event) => {
+      if (event.data.id === "tilt"){
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+          max: 10,
+          speed: 3100,
+          perspective: 800, 
+          transition: true,
+          easing: "cubic-bezier(.03,.98,.52,.99)",
+          scale: 1.05,
+          glare: true,
+          "max-glare": 0.1,
+      
+          gyroscope: true,
+          gyroscopeMinAngleX: -45,
+          gyroscopeMaxAngleX: 45,
+          gyroscopeMinAngleY: -45,
+          gyroscopeMaxAngleY: 45,
+          gyroscopeSamples: 10
+        });
+      }
+    }, false);
+
+    
+  </script>
 </html>
