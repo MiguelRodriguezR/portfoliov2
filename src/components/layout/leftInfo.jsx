@@ -2,7 +2,10 @@ import React, { useEffect, useRef } from "react";
 import "./layout.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faExternalLinkAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faExternalLinkAlt,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 
 const LeftInfo = () => {
@@ -40,6 +43,7 @@ const LeftInfo = () => {
       ease: "none",
       delay: 1.5,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -105,6 +109,7 @@ const LeftInfo = () => {
         </div>
         <div className="social">
           <a
+            rel="noreferrer"
             className="s-network"
             href="https://github.com/MiguelRodriguezR"
             target="_blank"
@@ -118,6 +123,7 @@ const LeftInfo = () => {
             </div>
           </a>
           <a
+            rel="noreferrer"
             className="s-network"
             href="mailto:miguel.a.rodriguez.r@gmail.com"
             target="_blank"
@@ -131,6 +137,7 @@ const LeftInfo = () => {
             </div>
           </a>
           <a
+            rel="noreferrer"
             className="s-network"
             href="https://twitter.com/MiguelRodriR"
             target="_blank"

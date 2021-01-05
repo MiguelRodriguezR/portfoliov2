@@ -9,7 +9,7 @@ const Main = () => {
       <EmailState>
         <Router>
           <Switch>
-            <Route exact path="/" component={Pcontainer}></Route>
+            <Route exact path="/portfoliov2" component={Pcontainer}></Route>
           </Switch>
         </Router>
       </EmailState>
