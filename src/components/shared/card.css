@@ -18,3 +18,11 @@
       width: 90%;  
     }
 }
+
+@media (max-width: 1150px) {
+    .card {
+        min-width: 300px;
+        width: 100%;  
+      }
+    
+  }

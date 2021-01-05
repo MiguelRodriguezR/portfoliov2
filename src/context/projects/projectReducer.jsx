@@ -9,10 +9,12 @@ export default (state, action) => {
         loading: false,
       };
     case PROJECT_ERROR:
-      return{
+      return {
         ...state,
         message: action.payload,
         loading: false,
-      }
+      };
+    default:
+      return state;
   }
 };

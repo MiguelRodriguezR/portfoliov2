@@ -32,4 +32,12 @@ code {
   color: #FFFFFF;
 }
 
+.thic{
+  letter-spacing: 3px;
+}
+
+.error{
+  margin-top: -20px;
+  color: red;
+}
 

@@ -1,73 +1,97 @@
-.p-section{
-    width: 100%;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.p-section {
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.project-structure{
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    cursor: pointer;
+.project-structure {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
 }
 
-.left{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.left {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.right{
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    justify-content: center;
+.right {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.p-langs {
+  font-size: 0.8em;
+  letter-spacing: 3px;
+}
+
+.p-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 2em;
+  font-weight: 600;
+  color: white;
+}
+
+.p-desc {
+  font-size: 0.8em;
+  color: #949495;
+}
+
+.img {
+  transition: all 0.2s ease-in-out;
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+}
+
+.frame {
+  opacity: 0.3;
+  filter: grayscale(0%);
+  position: absolute;
+}
+
+.project-structure:hover .img {
+  width: 150px;
+  height: 150px;
+  filter: grayscale(0%);
+}
+
+.project-structure:hover .frame {
+  opacity: 0;
+}
+
+.project-structure:hover .right {
+  padding: 5px;
+}
+
+@media (max-width: 1150px) {
+  .p-section {
     align-items: center;
-    padding: 20px;
+  }
 }
 
-.p-langs{
-    font-size: 0.8em;
-    letter-spacing: 3px;
+@media (max-width: 600px) {
+
+
+  .p-title {
+    font-size: 1.5em;
+  }
+
+  .right {
+    display: none;
+  }
 }
-
-.p-title{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 2em;
-    font-weight: 600;
-    color: white;
-}
-
-.p-desc{
-    font-size: 0.8em;
-    color: #949495;
-}
-
-.img{
-    transition: all 0.2s ease-in-out;
-    width: 120px;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
-}
-
-.project-structure:hover .img{
-    width: 150px;
-    height: 150px;
-    filter: grayscale(0%);
-}
-
-.project-structure:hover .right{
-    padding: 5px;
-}
-
-
-
-
-

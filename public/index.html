@@ -46,9 +46,9 @@
     window.addEventListener("message", (event) => {
       if (event.data.id === "tilt"){
         VanillaTilt.init(document.querySelectorAll(".card"), {
-          max: 10,
+          max: 4,
           speed: 3100,
-          perspective: 800, 
+          perspective: 1000, 
           transition: true,
           easing: "cubic-bezier(.03,.98,.52,.99)",
           scale: 1.05,

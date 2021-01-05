@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import ProjectsSection from '../sections/projects/projectsSection';
 import './layout.css';
 import { gsap } from "gsap";
+import AboutSection from '../sections/about/aboutSection';
+import ContactSection from '../sections/contact/contactSection';
 
 const Rightinfo = () => {
 
@@ -20,7 +22,15 @@ const Rightinfo = () => {
 
     return (
         <div className="right-container section-container" ref={rightRef}>
+            <div className="sec-title yellow thic">MY WORK</div>
             <ProjectsSection></ProjectsSection>
+            <div className="section-space"></div>
+            <div className="sec-title yellow thic">ABOUT</div>
+            <AboutSection></AboutSection>
+            <div className="section-space"></div>
+            <div className="sec-title yellow thic">CONTACT</div>
+            <ContactSection></ContactSection>
+            <div className="section-space"></div>
         </div>
     );
 };

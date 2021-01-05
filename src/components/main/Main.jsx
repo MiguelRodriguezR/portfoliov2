@@ -1,15 +1,18 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import EmailState from "../../context/emails/emailState";
 import ProjectState from "../../context/projects/projectState";
 import Pcontainer from "../layout/pcontainer";
 
 const Main = () => {
   return (
     <ProjectState>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Pcontainer}></Route>
-        </Switch>
-      </Router>
+      <EmailState>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Pcontainer}></Route>
+          </Switch>
+        </Router>
+      </EmailState>
     </ProjectState>
   );
 };
