@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./layout.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -7,6 +7,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
+import ScrollContext from "../../context/scroll/scrollContext";
 
 const LeftInfo = () => {
   const titleRef = useRef(null);
@@ -16,6 +17,7 @@ const LeftInfo = () => {
   const itextRef3 = useRef(null);
   const menuRef = useRef(null);
   const footerRef = useRef(null);
+  const { actualSection, setSelectedSection } = useContext(ScrollContext);
 
   const references = [
     titleRef,
@@ -25,6 +27,8 @@ const LeftInfo = () => {
     itextRef3,
     menuRef,
   ];
+
+  useEffect(() => {}, [actualSection]);
 
   useEffect(() => {
     references.forEach((ref, index) => {
@@ -50,7 +54,7 @@ const LeftInfo = () => {
     <div className="left-container section-container">
       <div className="top-path">
         <div className="intro">
-          <div className="uncutable">
+          <div className="uncutable title-container">
             <div className="title" ref={titleRef}>
               {" "}
               migu.<div className="yellow">es</div>(){" "}
@@ -82,17 +86,17 @@ const LeftInfo = () => {
         </div>
         <div className="uncutable">
           <div className="menu" ref={menuRef}>
-            <div className="option">
+            <div onClick={()=>{setSelectedSection('myWork')}} className={"option" + (actualSection === 'myWork' ? ' selected' : '')}>
               <div className="opt-num">1</div>
               <div className="opt-separator"></div>
               <div className="opt-text">My Work</div>
             </div>
-            <div className="option">
+            <div onClick={()=>{setSelectedSection('about')}} className={"option" + (actualSection === 'about' ? ' selected' : '')}>
               <div className="opt-num">2</div>
               <div className="opt-separator"></div>
               <div className="opt-text">About</div>
             </div>
-            <div className="option">
+            <div onClick={()=>{setSelectedSection('contact')}} className={"option" + (actualSection === 'contact' ? ' selected' : '')}>
               <div className="opt-num">3</div>
               <div className="opt-separator"></div>
               <div className="opt-text">Contact</div>

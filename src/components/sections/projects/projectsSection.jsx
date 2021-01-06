@@ -5,7 +5,7 @@ import ProjectContext from "../../../context/projects/projectContext";
 import "./projects.css";
 import COLORS from "../../shared/colors";
 
-const ProjectsSection = () => {
+const ProjectsSection = React.forwardRef((props, ref) => {
   const { projects } = useContext(ProjectContext);
 
   const colors = COLORS;
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <div className="p-section">
+    <div className="p-section" ref={ref}>
       {projects.map((project,index) => (
         <Card key={project.name}>
           <ProjectStructure
@@ -45,6 +45,6 @@ const ProjectsSection = () => {
       ))}
     </div>
   );
-};
+});
 
 export default ProjectsSection;

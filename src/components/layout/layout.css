@@ -85,10 +85,13 @@
 }
 
 .option {
+  pointer-events: all;
+  cursor: pointer;
   display: flex;
   color: #a9b7c5;
   margin-top: 10px;
   align-items: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .opt-separator {
@@ -97,6 +100,7 @@
   background-color: #a9b7c5;
   margin-left: 5px;
   margin-right: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
 .footer-path {
@@ -153,6 +157,16 @@
 
 .section-space{
   margin-bottom: 30px;
+}
+
+.selected{
+  color: white;
+  font-size: 2em;
+}
+
+.selected .opt-separator{
+  height: 2px;
+  background-color: white;
 }
 
 a {
@@ -273,5 +287,9 @@ a {
 
   .footer-path .photo{
     display: none;
+  }
+
+  .title-container{
+    /* margin-left: -45px; */
   }
 }

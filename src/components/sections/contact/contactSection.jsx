@@ -3,15 +3,15 @@ import Card from "../../shared/card";
 import "./contact.css";
 import ContactStructure from "./contactStructure";
 
-const ContactSection = () => {
+const ContactSection = React.forwardRef((props, ref) => {
 
   return (
-    <div className="c-section">
+    <div className="c-section" ref={ref}>
       <Card>
         <ContactStructure></ContactStructure>
       </Card>
     </div>
   );
-};
+});
 
 export default ContactSection;

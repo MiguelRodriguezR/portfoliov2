@@ -5,3 +5,8 @@ export const SEND_EMAIL = 'SEND_EMAIL';
 export const EMAIL_ERROR = 'EMAIL_ERROR';
 export const EMAIL_SENDING = 'EMAIL_SENDING';
 
+export const SET_POSITION = 'SET_POSITION';
+export const SET_SECTION = 'SET_SECTION';
+export const SET_TOP_SECTIONS = 'SET_TOP_SECTIONS';
+export const SET_SELECTED_SECTION = 'SET_SELECTED_SECTION';
+

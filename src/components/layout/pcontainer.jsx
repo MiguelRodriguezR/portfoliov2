@@ -1,12 +1,20 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { Fragment, useContext, useEffect, useRef } from "react";
 import ProjectContext from "../../context/projects/projectContext";
 import "./layout.css";
 import LeftInfo from "./leftInfo";
 import Rightinfo from "./rightinfo";
 import { gsap } from "gsap";
+import ScrollContext from "../../context/scroll/scrollContext";
+import Loader from "../shared/loader/loader";
 
 const Pcontainer = () => {
   const { message, loading, getProjects } = useContext(ProjectContext);
+  const {
+    setPosition,
+    selectedSection,
+    topSections,
+    setSelectedSection,
+  } = useContext(ScrollContext);
 
   const bigRef = useRef(null);
 
@@ -31,17 +39,36 @@ const Pcontainer = () => {
     // eslint-disable-next-line
   }, [loading, message]);
 
-  if (loading) return <p className="white">loading</p>;
+  useEffect(() => {
+    if (bigRef.current && selectedSection) {
+      bigRef.current.scrollTo({
+        top: topSections[selectedSection],
+        behavior: "smooth",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedSection]);
+
+  const handleScroll = (e) => {
+    // console.log(bigRef)
+    setSelectedSection(null);
+    setPosition(bigRef.current.scrollTop + bigRef.current.offsetHeight / 2);
+  };
 
   return (
-    <div className="big-container" ref={bigRef}>
-      <div className="top-shadow"></div>
-      <div className="bottom-shadow"></div>
-      <div className="mid-contaier">
-        <LeftInfo></LeftInfo>
-        <Rightinfo></Rightinfo>
-      </div>
-    </div>
+    <Fragment>
+      <Loader></Loader>
+      {!loading && (
+        <div className="big-container" onScroll={handleScroll} ref={bigRef}>
+          <div className="top-shadow"></div>
+          <div className="bottom-shadow"></div>
+          <div className="mid-contaier">
+            <LeftInfo></LeftInfo>
+            <Rightinfo></Rightinfo>
+          </div>
+        </div>
+      )}
+    </Fragment>
   );
 };
 
