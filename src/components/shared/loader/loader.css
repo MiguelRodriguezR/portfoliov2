@@ -1,7 +1,7 @@
 .shp1 {
   fill: transparent;
   stroke-dasharray: 140 540;
-  stroke-dashoffset: -400;
+  stroke-dashoffset: -300;
   stroke-width: 100px;
   stroke: #19f6e8;
 }
@@ -17,6 +17,7 @@
   left: 0;
   top: 0;
   transition: all 0.2s ease-in-out;
+  flex-direction: column;
 }
 
 @keyframes draw {
@@ -32,13 +33,13 @@
 
 @keyframes draw2 {
   0% {
-    fill: transparent;
+    opacity: 0;
   }
-  50% {
-    fill: transparent;
+  90% {
+    opacity: 0;
   }
   100% {
-    fill: #121212;
+    opacity: 1;
   }
 }
 
@@ -50,7 +51,7 @@
     stroke: #000000;
   }
   100% {
-    stroke: #ffffff;
+    stroke: #FFC66D;
   }
 }
 
@@ -62,7 +63,7 @@
     fill: transparent;
   }
   100% {
-    fill: #ffffff;
+    fill:#FFC66D;
   }
 }
 
@@ -78,21 +79,21 @@
   }
 }
 
-.shp0 {
-  -webkit-animation: 5s draw2 linear forwards;
-  animation: 5s draw2 linear forwards;
+.loading-text {
+  -webkit-animation: 6s draw2 linear forwards;
+  animation: 6s draw2 linear forwards;
 }
 
 .txt {
-  -webkit-animation: 2.5s draw linear forwards, 5s draw3 linear forwards,
-    5s draw4 linear forwards;
-  animation: 2.5s draw linear forwards, 5s draw3 linear forwards,
-    5s draw4 linear forwards;
+  -webkit-animation: 2s draw linear forwards, 4s draw3 linear forwards,
+    4s draw4 linear forwards;
+  animation: 2s draw linear forwards, 4s draw3 linear forwards,
+    4s draw4 linear forwards;
 }
 
 .shp1 {
-  -webkit-animation: 2.5s draw linear forwards, 5s draw3 linear forwards;
-  animation: 2.5s draw linear forwards, 5s draw3 linear forwards;
+  -webkit-animation: 2s draw linear forwards, 4s draw3 linear forwards;
+  animation: 2s draw linear forwards, 4s draw3 linear forwards;
 }
 
 .loader-svg{

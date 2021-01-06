@@ -40,6 +40,7 @@ const Loader = () => {
           </tspan>
         </text>
       </svg>
+      <p className="loading-text yellow">loading...</p>
     </div>
   );
 };
