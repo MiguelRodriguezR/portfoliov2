@@ -11,7 +11,7 @@ const Main = () => {
         <ScrollState>
           <Router>
             <Switch>
-              <Route exact path="/portfoliov2" component={Pcontainer}></Route>
+              <Route exact path="/" component={Pcontainer}></Route>
             </Switch>
           </Router>
         </ScrollState>
