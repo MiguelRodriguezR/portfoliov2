@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react";
 import "./layout.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   faExternalLinkAlt,
-  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 import ScrollContext from "../../context/scroll/scrollContext";
@@ -129,13 +128,13 @@ const LeftInfo = () => {
           <a
             rel="noreferrer"
             className="s-network"
-            href="mailto:miguel.a.rodriguez.r@gmail.com"
+            href="https://www.linkedin.com/in/miguel-rodriguez-a66b9084/"
             target="_blank"
           >
             <div className="s-n-ico">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon icon={faLinkedin} />
             </div>
-            <div className="s-n-text">Email</div>
+            <div className="s-n-text">Linkedin</div>
             <div className="s-n-ico">
               <FontAwesomeIcon icon={faExternalLinkAlt} />
             </div>
