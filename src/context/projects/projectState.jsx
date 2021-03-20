@@ -20,7 +20,7 @@ const ProjectState = (props) => {
       result.data.projects.map((p) => (p.id = p._id));
       dispatch({
         type: GET_PROJECTS,
-        payload: result.data.projects,
+        payload: result.data.projects.sort( (p1,p2) => p1.position > p2.position ? 1 : -1),
       });
     } catch (error) {
       dispatchError();
