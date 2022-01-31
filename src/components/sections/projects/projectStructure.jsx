@@ -1,15 +1,11 @@
 import React from 'react';
-import "./projects.css"
-import ReactGA from 'react-ga';
+import "./projects.css";
+import gtag from 'ga-gtag';
 
 const ProjectStructure = ({ langs, title, desc, image, color, plink }) => {
 
     const registerClick = () => {
-        ReactGA.event({
-            category: 'User',
-            action: 'Clicked Project',
-            label: title
-        });
+        gtag('event', 'Clicked_Project', {title})
     }
 
     return (

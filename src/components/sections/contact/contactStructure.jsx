@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import EmailContext from "../../../context/emails/emailContext";
 import validateEmail from "../../shared/regex";
 import "./contact.css";
-import ReactGA from 'react-ga';
+import gtag from 'ga-gtag';
 
 const ContactStructure = () => {
   const emailContext = useContext(EmailContext);
@@ -62,11 +62,7 @@ const ContactStructure = () => {
   };
 
   const registerTyping = (field) => {
-    ReactGA.event({
-        category: 'User',
-        action: 'Contact typed',
-        label: field
-    });
+    gtag('event', 'User_Contact_Typed', {field})
   }
 
   return (

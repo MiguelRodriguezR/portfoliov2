@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 import ScrollContext from "../../context/scroll/scrollContext";
-import ReactGA from 'react-ga';
+import gtag from 'ga-gtag';
 
 const LeftInfo = () => {
   const titleRef = useRef(null);
@@ -51,11 +51,7 @@ const LeftInfo = () => {
   }, []);
 
   const registerClick = (socialName) => {
-    ReactGA.event({
-        category: 'User',
-        action: 'Clicked Social',
-        label: socialName
-    });
+    gtag('event', 'Clicked_Social', {socialName})
   }
 
   return (
