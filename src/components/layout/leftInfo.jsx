@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
 import ScrollContext from "../../context/scroll/scrollContext";
+import ReactGA from 'react-ga';
 
 const LeftInfo = () => {
   const titleRef = useRef(null);
@@ -48,6 +49,14 @@ const LeftInfo = () => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const registerClick = (socialName) => {
+    ReactGA.event({
+        category: 'User',
+        action: 'Clicked Social',
+        label: socialName
+    });
+  }
 
   return (
     <div className="left-container section-container">
@@ -112,6 +121,7 @@ const LeftInfo = () => {
         </div>
         <div className="social">
           <a
+            onClick={()=>registerClick('github')}
             rel="noreferrer"
             className="s-network"
             href="https://github.com/MiguelRodriguezR"
@@ -126,6 +136,7 @@ const LeftInfo = () => {
             </div>
           </a>
           <a
+            onClick={()=>registerClick('linkedin')}
             rel="noreferrer"
             className="s-network"
             href="https://www.linkedin.com/in/miguel-rodriguez-a66b9084/"
@@ -140,6 +151,7 @@ const LeftInfo = () => {
             </div>
           </a>
           <a
+            onClick={()=>registerClick('twitter')}
             rel="noreferrer"
             className="s-network"
             href="https://twitter.com/MiguelRodriR"

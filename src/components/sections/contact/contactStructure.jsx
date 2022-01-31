@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import EmailContext from "../../../context/emails/emailContext";
 import validateEmail from "../../shared/regex";
 import "./contact.css";
+import ReactGA from 'react-ga';
 
 const ContactStructure = () => {
   const emailContext = useContext(EmailContext);
@@ -28,6 +29,9 @@ const ContactStructure = () => {
   };
 
   const onChangeEmail = (e) => {
+    if(email[e.target.name] == ""){
+      registerTyping(e.target.name)
+    }
     saveEmail({
       ...email,
       [e.target.name]: e.target.value,
@@ -56,6 +60,14 @@ const ContactStructure = () => {
 
     sendEmail(email);
   };
+
+  const registerTyping = (field) => {
+    ReactGA.event({
+        category: 'User',
+        action: 'Contact typed',
+        label: field
+    });
+  }
 
   return (
     <form className="contact-structure" onSubmit={submitProject}>
