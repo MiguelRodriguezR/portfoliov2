@@ -5,7 +5,7 @@ object-assign
 */
 
 /*!
- * CSSPlugin 3.6.0
+ * CSSPlugin 3.9.1
  * https://greensock.com
  *
  * Copyright 2008-2021, GreenSock. All rights reserved.
@@ -15,12 +15,12 @@ object-assign
 */
 
 /*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
 /*!
- * GSAP 3.6.0
+ * GSAP 3.9.1
  * https://greensock.com
  *
  * @license Copyright 2008-2021, GreenSock. All rights reserved.
