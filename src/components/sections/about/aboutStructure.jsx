@@ -6,7 +6,7 @@ const AboutStructure = ({years,text,techlist}) => {
         <div className="about-structure">
             <div className="a-title">ABOUT ME</div>
             <div className="a-photo">
-                <img src="https://i.imgur.com/bcypd4u.jpg" alt=""/>
+                <img src="https://i.imgur.com/fAKy7Id.jpeg" alt=""/>
             </div>
             <div className="a-desc">{text}</div>
             <div className="a-desc">Here are a few technologies I've been working with recently:</div>

@@ -6,7 +6,7 @@ import scrollReducer from "./scrollReducer";
 const ScrollState = (props) => {
   const initialState = {
     position: 0,
-    topSections: {'myWork':0 ,'about':0, 'contact':0},
+    topSections: {'experience': 0,'myWork':0 ,'about':0, 'contact':0},
     actualSection: null,
     selectedSection: null,
   };

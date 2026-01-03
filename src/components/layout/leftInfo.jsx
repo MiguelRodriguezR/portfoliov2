@@ -90,18 +90,23 @@ const LeftInfo = () => {
         </div>
         <div className="uncutable">
           <div className="menu" ref={menuRef}>
-            <div onClick={()=>{setSelectedSection('myWork')}} className={"option" + (actualSection === 'myWork' ? ' selected' : '')}>
+            <div onClick={()=>{setSelectedSection('experience')}} className={"option" + (actualSection === 'experience' ? ' selected' : '')}>
               <div className="opt-num">1</div>
               <div className="opt-separator"></div>
-              <div className="opt-text">My Work</div>
+              <div className="opt-text">Experience</div>
+            </div>
+            <div onClick={()=>{setSelectedSection('myWork')}} className={"option" + (actualSection === 'myWork' ? ' selected' : '')}>
+              <div className="opt-num">2</div>
+              <div className="opt-separator"></div>
+              <div className="opt-text">Personal Projects</div>
             </div>
             <div onClick={()=>{setSelectedSection('about')}} className={"option" + (actualSection === 'about' ? ' selected' : '')}>
-              <div className="opt-num">2</div>
+              <div className="opt-num">3</div>
               <div className="opt-separator"></div>
               <div className="opt-text">About</div>
             </div>
             <div onClick={()=>{setSelectedSection('contact')}} className={"option" + (actualSection === 'contact' ? ' selected' : '')}>
-              <div className="opt-num">3</div>
+              <div className="opt-num">4</div>
               <div className="opt-separator"></div>
               <div className="opt-text">Contact</div>
             </div>

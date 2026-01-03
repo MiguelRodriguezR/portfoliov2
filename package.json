@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage":"https://migu.es/",
+  "homepage": "https://migu.es/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -12,6 +12,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "ga-gtag": "^1.2.0",
     "gsap": "^3.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

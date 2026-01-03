@@ -1,5 +1,6 @@
 import React, { Fragment, useContext, useEffect, useRef } from "react";
 import ProjectContext from "../../context/projects/projectContext";
+import ExperienceContext from "../../context/experiences/experienceContext";
 import "./layout.css";
 import LeftInfo from "./leftInfo";
 import Rightinfo from "./rightinfo";
@@ -9,6 +10,7 @@ import Loader from "../shared/loader/loader";
 
 const Pcontainer = () => {
   const { message, loading, getProjects } = useContext(ProjectContext);
+  const { getExperiences } = useContext(ExperienceContext);
   const {
     setPosition,
     selectedSection,
@@ -36,6 +38,7 @@ const Pcontainer = () => {
     }
 
     getProjects();
+    getExperiences();
     // eslint-disable-next-line
   }, [loading, message]);
 
